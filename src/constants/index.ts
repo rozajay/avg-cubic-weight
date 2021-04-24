@@ -1,0 +1,3 @@
+const DIVISION_FACTOR = 1000000;
+
+export default DIVISION_FACTOR;
