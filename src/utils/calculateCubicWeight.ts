@@ -1,12 +1,11 @@
-import DIVISION_FACTOR from '../constants';
+import {DIVISION_FACTOR, CONVERSION_FACTOR} from '../constants';
 
 const calculateCubicWeight = (
   width: number,
   length: number,
   height: number,
-  conversionFactor: number,
 ): number => {
-  const cubicWeight = width * length * height * conversionFactor;
+  const cubicWeight = width * length * height * CONVERSION_FACTOR;
   const cubicWeightInKg = cubicWeight / DIVISION_FACTOR;
   return cubicWeightInKg;
 };
