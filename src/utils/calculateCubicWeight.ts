@@ -7,6 +7,7 @@ const calculateCubicWeight = (
 ): number => {
   const cubicWeight = width * length * height * CONVERSION_FACTOR;
   const cubicWeightInKg = cubicWeight / DIVISION_FACTOR;
+
   return cubicWeightInKg;
 };
 

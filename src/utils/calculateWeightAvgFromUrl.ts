@@ -15,9 +15,7 @@ const calculateWeightAvgFromUrl = async (
         const avgCubicWeight = findAirConditionersAvg(objects);
         return { avgCubicWeight, next: next ? baseUrl + next : next };
       }
-      if (!objects) {
-        throw Error('Apliances not found in response');
-      }
+      throw Error('Apliances not found in response');
     });
     return res;
   } catch (error) {

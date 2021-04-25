@@ -43,7 +43,7 @@ const calculateWeightAvgFromNestedApi = async (
   }
 
   const sumOfArray = weightsArray.reduce((prev, current) => prev + current);
-  const avgOfArray = sumOfArray/weightsArray.length;
+  const avgOfArray = sumOfArray / weightsArray.length;
 
   return avgOfArray;
 };
