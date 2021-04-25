@@ -1,4 +1,4 @@
-import {DIVISION_FACTOR, CONVERSION_FACTOR} from '../constants';
+import { DIVISION_FACTOR, CONVERSION_FACTOR } from '../constants';
 
 const calculateCubicWeight = (
   width: number,

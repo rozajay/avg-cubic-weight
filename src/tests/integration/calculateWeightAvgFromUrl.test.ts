@@ -1,6 +1,6 @@
 import calculateWeightAvgFromUrl from '../../utils/calculateWeightAvgFromUrl';
 
-const baseUrl = 'http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com'
+const baseUrl = 'http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com';
 describe('Find all air conditioners avg cubic weight from array', () => {
   it.each([
     [`${baseUrl}/api/products/1`, { avgCubitWeight: 21.777160000000002, next: `${baseUrl}/api/products/2` }],

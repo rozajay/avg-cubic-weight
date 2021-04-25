@@ -18,9 +18,7 @@ const calculateWeightAvgFromUrl = async (
       if (!objects) {
         throw Error('Apliances not found in response');
       }
-      if (!next) {
-        throw Error('Next url not found in response');
-      }
+      throw Error('Next url not found in response');
     });
     return res;
   } catch (error) {
