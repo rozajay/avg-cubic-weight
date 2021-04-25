@@ -1,4 +1,4 @@
-import calculateCubicWeight from '../utils/calculateCubicWeight';
+import calculateCubicWeight from '../../utils/calculateCubicWeight';
 
 describe('Calculate cubic weight', () => {
   it('Successful calculation', () => {
