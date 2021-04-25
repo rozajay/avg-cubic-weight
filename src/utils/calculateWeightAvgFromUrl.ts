@@ -11,14 +11,13 @@ const calculateWeightAvgFromUrl = async (
     const res = await axios.get(url).then((response: AxiosResponse) => {
       const { objects, next } = response.data;
       const baseUrl = findBaseUrl(url);
-      if (objects && next) {
+      if (objects) {
         const avgCubitWeight = findAirConditionersAvg(objects);
-        return { avgCubitWeight, next: baseUrl + next };
+        return { avgCubitWeight, next: next ? baseUrl + next : next };
       }
       if (!objects) {
         throw Error('Apliances not found in response');
       }
-      throw Error('Next url not found in response');
     });
     return res;
   } catch (error) {

@@ -5,6 +5,7 @@ describe('Find all air conditioners avg cubic weight from array', () => {
   it.each([
     [`${baseUrl}/api/products/1`, { avgCubitWeight: 21.777160000000002, next: `${baseUrl}/api/products/2` }],
     [`${baseUrl}/api/products/2`, { avgCubitWeight: undefined, next: `${baseUrl}/api/products/a` }],
+    [`${baseUrl}/api/products/5`, { avgCubitWeight: undefined, next: null }],
   ])('Successfully calculate the avg weight for a given url', async (url, expected) => {
     const data = await calculateWeightAvgFromUrl(url);
     expect(data).toEqual(expected);
