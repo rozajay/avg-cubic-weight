@@ -7,7 +7,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'airbnb-base',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
   ],
   parserOptions: {
     ecmaVersion: 12,
@@ -15,6 +15,8 @@ module.exports = {
   },
   rules: {
     'import/extensions': 'off',
-    'import/no-unresolved': 'off'
+    'import/no-unresolved': 'off',
+    'no-await-in-loop': 'off',
+    "no-console": "off",
   },
 };
