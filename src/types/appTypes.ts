@@ -10,3 +10,8 @@ export interface Appliance {
     weight: number,
     size:Size
 }
+
+export interface CalculationData {
+    avgCubitWeight: number | undefined,
+    next: string | null
+}
