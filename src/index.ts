@@ -41,31 +41,31 @@ const calculateWeightAvgFromNestedApi = async (
     }
     nextUrl = response?.next;
   }
+  if (weightsArray.length > 0) {
+    const sumOfArray = weightsArray.reduce((prev, current) => prev + current);
+    const avgOfArray = sumOfArray / weightsArray.length;
 
-  const sumOfArray = weightsArray.reduce((prev, current) => prev + current);
-  const avgOfArray = sumOfArray / weightsArray.length;
-
-  return avgOfArray;
+    return avgOfArray;
+  }
+  throw Error('No ACs found');
 };
 
-try {
-  calculateWeightAvgFromNestedApi(
+calculateWeightAvgFromNestedApi(
     processedContent.inputurl as string,
-  ).then((value) => {
-    if (value) {
-      console.log(
-        chalk.green('Input Url:'),
-        chalk.white(`${processedContent.inputurl}`),
+).then((value) => {
+  if (value) {
+    console.log(
+      chalk.green('Input Url:'),
+      chalk.white(`${processedContent.inputurl}`),
 
-      );
-      console.log(
-        chalk.green('Average Cubic Weight for ACs'),
-        chalk.white(`${value}kg`),
-      );
-    }
-  });
-} catch (error) {
+    );
+    console.log(
+      chalk.green('Average Cubic Weight for ACs'),
+      chalk.white(`${value}kg`),
+    );
+  }
+}).catch((error) => {
   console.log(
-    chalk.red(`Make sure the inputs are passed in double quotes eg("1 2 2") \n Output: ${error}`),
+    chalk.red(`Make sure the inputs are passed in double quotes eg("1 2 2") \nOutput: ${error}`),
   );
-}
+});
