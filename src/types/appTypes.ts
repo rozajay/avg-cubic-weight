@@ -12,6 +12,6 @@ export interface Appliance {
 }
 
 export interface CalculationData {
-    avgCubitWeight: number | undefined,
+    avgCubicWeight: number | undefined,
     next: string | null
 }

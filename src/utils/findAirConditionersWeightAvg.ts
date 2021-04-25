@@ -9,7 +9,7 @@ const findAirConditionersAvg = (objectsArray:Appliance[]): number | undefined =>
   );
   // Check that at least one air conditioner is found
   if (airConditioners.length > 0) {
-    // Calculate the cubit weight of air conditioners
+    // Calculate the cubic weight of air conditioners
     const weightsArray = airConditioners.map((airConditioner: Appliance) => {
       const { width, length, height } = airConditioner.size;
       return calculateCubicWeight(width, length, height);

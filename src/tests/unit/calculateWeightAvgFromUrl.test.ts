@@ -22,7 +22,7 @@ describe('Find all air conditioners avg cubic weight from array', () => {
       },
     });
     const data = await calculateWeightAvgFromUrl('http://getresults.com/api/products/1');
-    expect(data).toEqual({ avgCubitWeight: 0.07405874999999998, next: 'http://getresults.com/api/products/2' });
+    expect(data).toEqual({ avgCubicWeight: 0.07405874999999998, next: 'http://getresults.com/api/products/2' });
   });
 
   it('Data doesn not containing Air Conditionders', async () => {
@@ -42,7 +42,7 @@ describe('Find all air conditioners avg cubic weight from array', () => {
       },
     });
     const data = await calculateWeightAvgFromUrl('http://getresults.com/api/products/1');
-    expect(data).toEqual({ avgCubitWeight: undefined, next: 'http://getresults.com/api/products/2' });
+    expect(data).toEqual({ avgCubicWeight: undefined, next: 'http://getresults.com/api/products/2' });
   });
 
   it('Data doesn not containing objects field', async () => {
